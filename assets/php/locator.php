@@ -47,6 +47,10 @@ while ($row = @mysqli_fetch_assoc($result)){
   $newnode->setAttribute("Last_Maintenance", $row['Last_Maintenance']);
   $newnode->setAttribute("Operation_Time", $row['Operation_Time']);
   $newnode->setAttribute("Last_Update", $row['Last_Update']);
+  $newnode->setAttribute("Schedule", $row['Schedule']);
+  $newnode->setAttribute("Bearing", $row['Bearing']);
+  $newnode->setAttribute("Accu", $row['Accu']);
+  $newnode->setAttribute("Oil_Level", $row['Oil_Level']);
 }
 
 echo $dom->saveXML();
