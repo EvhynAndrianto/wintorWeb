@@ -1,0 +1,33 @@
+.navbar-custom {
+   background-color: #F8F8F8;
+   border-color: #E7E7E7;
+}
+
+
+.navbar-header{
+    color: #111;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #000000;
+    background-color:#E7E7E7;
+}
+
+.panel0, .panel1, .panel2{
+    color: black;
+}
+
+.panel0:hover, .panel1:hover, .panel2:hover{
+    color: black;
+}
+
+
+
+
+body{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+  background:url('../../assets/img/3.jpg');
+
+}
