@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2017 at 02:54 AM
+-- Generation Time: Jan 03, 2018 at 03:18 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -51,11 +51,11 @@ CREATE TABLE `markers` (
 --
 
 INSERT INTO `markers` (`id`, `name`, `info`, `lat`, `lng`, `number`, `Fuel`, `Production_per_Day`, `Last_Maintenance`, `Operation_Time`, `Last_Update`, `Schedule`, `Bearing`, `Accu`, `Oil_Level`) VALUES
-(1, 'Wintor1', 'Kalimantan Barat', 0.000000, 109.333336, '+628974253558', 65, '20', '2018-01-20', 15, '2017-12-08 08:21:56', 'Afdeling A1 Block C2', 1, 1, 1),
+(1, 'Wintor1', 'Kalimantan Barat', 0.000000, 109.333336, '+628974253558', 60, '225', '2018-01-20', 15, '2017-12-10 20:38:46', 'Afdeling A1 Block C2', 1, 1, 1),
 (2, 'Wintor2', 'Jakarta', -6.121435, 106.774124, '+6281293949298', 100, '500', '2017-11-08', 10, '2017-12-08 08:22:20', 'Afdeling A5Block C1', 1, 0, 1),
-(3, 'Wintor3', 'Medan', 3.597031, 98.678513, '+6289759409232', 10, '1000', '2017-12-05', 12, '2017-12-08 08:22:39', 'Afdeling A2 Block C4', 0, 0, 1),
+(3, 'Wintor3', 'Medan', 3.597031, 98.678513, '+6289759409232', 10, '1000', '2017-12-05', 12, '2017-12-09 13:48:27', 'Afdeling A2 Block C4', 1, 0, 1),
 (4, 'Wintor4', 'Semarang', -6.966667, 110.416664, '+6281193043948', 40, '400', '2016-12-12', 5, '2017-12-08 08:22:59', 'Afdeling A1 Block C7', 1, 1, 0),
-(5, 'Wintor5', 'Jambi', -1.609972, 103.607254, '+6281294933829', 75, '300', '2017-04-18', 3, '2017-12-08 08:23:18', 'Afdeling A3 Block C4', 0, 1, 1);
+(5, 'Wintor5', 'Jambi', -1.609972, 103.607254, '+6281294933829', 25, '300', '2017-04-18', 3, '2017-12-09 14:17:51', 'Afdeling A3 Block C4', 0, 1, 1);
 
 --
 -- Indexes for dumped tables
