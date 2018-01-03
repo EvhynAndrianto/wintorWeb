@@ -3,29 +3,39 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" >
     <title class="title">Wintor Tracking System</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Mystyles.css">
+    <link rel="stylesheet" href="assets/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/Mystyles.css">
 	<link rel="icon" href="assets/img/logo-wintor.ico" type="image/ico">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	
 </head>
 
 <body>
     <nav class="navbar navbar-custom">
     <div class="container">
-        <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><img class="img-responsive" style="float:left; height:50px; width:65px;" src="assets/img/logo-wintor.png"></a>
+		<div class="row">
+		
+		<div class="col-xs-3 col-md-3"><a class="navbar-brand navbar-link" href="#"><img class="img-responsive" style="float:left; height:50px; width:65px;" src="assets/img/logo-wintor.png"></a>
 
         </div>
-        <div class="navbar-header"><h2>Wintor Tracking System</h2>
-          </div>
-        <div class="navbar-collapse" id="navcol-1">
+		
+        <div class="col-xs-6 col-md-6"><h2>Wintor Tracking System</h2>
+         </div>
+		  
+        <div class="col-xs-3 col-md-3">
             <ul class="nav navbar-nav navbar-right">
                 <li role="presentation" class="active"><a href="http://www.astra-otoparts.com/product.asp?cat=1000978&lang=EL" target="_blank"><h4>Locate your Wintor all times</h4></a></li>
             </ul>
         </div>
+		
     </div>
-</nav>
-    <div class="col-md-6">
+	</nav>
+
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-6">
 
   <div class="panel-group" id="accordion">
   
@@ -45,14 +55,34 @@
 				<th>Total Production/Day</th>
 				<th>Operation Time</th>
 				<th>Last Maintenance</th>
+				<th>Equipment Check</th>
+				<th>Today's Schedule</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<td>0%</td>
+				<td><meter value="0" min="0" low="21" max="100" high="51" optimum="100" id="battery-meter0"></meter>
+					<span id="battery0">0%</span>
+				</td>
 				<td>0 items</td>
 				<td>0 hours</td>
 				<td>00/00/0000</td>
+                <td>
+                  <div>
+                  <span id = "oil0" class="glyphicon glyphicon-remove"> Oil</span>
+				  </div>
+	
+                  <div>
+                  <span id = "accu0" class="glyphicon glyphicon-remove"> Accu</span>
+				  </div>
+				  
+                  <div>
+                  <span id = "bearing0" class="glyphicon glyphicon-remove"> Bearing</span>
+				  </div>
+				  
+                </td>
+                </td>
+				<td>0</td>
 			</tr>
 			</tbody>
 			</table>
@@ -79,14 +109,33 @@
 				<th>Total Production/Day</th>
 				<th>Operation Time</th>
 				<th>Last Maintenance</th>
+				<th>Equipment Check</th>
+				<th>Today's Schedule</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<td>0%</td>
+				<td><meter value="0" min="0" low="21" max="100" high="51" optimum="100" id="battery-meter1"></meter>
+					<span id="battery1">0%</span>
+				</td>
 				<td>0 items</td>
 				<td>0 hours</td>
 				<td>00/00/0000</td>
+                <td>
+                  <div>
+                  <span id="oil1" class="glyphicon glyphicon-remove"> Oil</span>
+				  </div>
+	
+                  <div>
+                  <span id="accu1" class="glyphicon glyphicon-remove"> Accu</span>
+				  </div>
+				  
+                  <div>
+                  <span id="bearing1" class="glyphicon glyphicon-remove"> Bearing</span>
+				  </div>
+				  
+                </td>
+				<td>0</td>
 			</tr>
 			</tbody>
 			</table>
@@ -113,14 +162,33 @@
 				<th>Total Production/Day</th>
 				<th>Operation Time</th>
 				<th>Last Maintenance</th>
+				<th>Equipment Check</th>
+				<th>Today's Schedule</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<td>0%</td>
+				<td><meter value="0" min="0" low="21" max="100" high="51" optimum="100" id="battery-meter2"></meter>
+					<span id="battery2">0%</span>
+				</td>
 				<td>0 items</td>
 				<td>0 hours</td>
 				<td>00/00/0000</td>
+                <td>
+                  <div>
+                  <span id="oil2" class="glyphicon glyphicon-remove"> Oil</span>
+				  </div>
+	
+                  <div>
+                  <span  id="accu2" class="glyphicon glyphicon-remove"> Accu</span>
+				  </div>
+				  
+                  <div>
+                  <span id="bearing2" class="glyphicon glyphicon-remove"> Bearing</span>
+				  </div>
+				  
+                </td>
+				<td>0</td>
 			</tr>
 			</tbody>
 			</table>
@@ -128,67 +196,315 @@
       </div>
     </div>
 	
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <b class="panel-title">
+          <center><a class="panel3"  data-toggle="collapse" data-parent="#accordion" href="#collapse4">Wintor Unit 4</a></center>
+        </b>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+            
+        
+			<table id="table3" class="table">
+			<thead>
+			<tr>
+				<th>Fuel Level</th>
+				<th>Total Production/Day</th>
+				<th>Operation Time</th>
+				<th>Last Maintenance</th>
+				<th>Equipment Check</th>
+				<th>Today's Schedule</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><meter value="0" min="0" low="21" max="100" high="51" optimum="100" id="battery-meter3"></meter>
+					<span id="battery3">0%</span>
+				</td>
+				<td>0 items</td>
+				<td>0 hours</td>
+				<td>00/00/0000</td>
+                <td>
+                  <div>
+                  <span id="oil3" class="glyphicon glyphicon-remove"> Oil</span>
+				  </div>
+	
+                  <div>
+                  <span id="accu3" class="glyphicon glyphicon-remove"> Accu</span>
+				  </div>
+				  
+                  <div>
+                  <span id="bearing3" class="glyphicon glyphicon-remove"> Bearing</span>
+				  </div>
+				  
+                </td>
+				<td>0</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>         
+      </div>
     </div>
-
- 
-<p>Date: <span id="demonew"></span> Time: <span id="demo"></span> </p>
-	<span id="demo"></span>
-		<script>
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth()+1; //January is 0!
-		var yyyy = today.getFullYear();
-		if(dd<10) {
-		dd='0'+dd
-		} 
-		
-		if(mm<10) {
-		mm='0'+mm
-		} 
-
-		today = mm+'/'+dd+'/'+yyyy;
-		document.getElementById("demonew").innerHTML = today;
-		var myVar=setInterval(function(){myTimer()},1000);
-		
-		function myTimer() {
-			var d = new Date();
-			document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-		}
-		</script>
-
+	
+	    <div class="panel panel-default">
+      <div class="panel-heading">
+        <b class="panel-title">
+          <center><a class="panel4"  data-toggle="collapse" data-parent="#accordion" href="#collapse5">Wintor Unit 5</a></center>
+        </b>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+            
+        
+			<table id="table4" class="table">
+			<thead>
+			<tr>
+				<th>Fuel Level</th>
+				<th>Total Production/Day</th>
+				<th>Operation Time</th>
+				<th>Last Maintenance</th>
+				<th>Equipment Check</th>
+				<th>Today's Schedule</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><meter value="0" min="0" low="21" max="100" high="51" optimum="100" id="battery-meter4"></meter>
+					<span id="battery4">0%</span>
+				</td>
+				<td>0 items</td>
+				<td>0 hours</td>
+				<td>00/00/0000</td>
+                <td>
+                  <div>
+                  <span id="oil4" class="glyphicon glyphicon-remove"> Oil</span>
+				  </div>
+	
+                  <div>
+                  <span id="accu4" class="glyphicon glyphicon-remove"> Accu</span>
+				  </div>
+				  
+                  <div>
+                  <span id="bearing4" class="glyphicon glyphicon-remove"> Bearing</span>
+				  </div>
+				  
+                </td>
+				<td>0</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>         
+      </div>
+    </div>
+	
+	
+	
+    </div>
 		
 </div>
 
- 
- 
- 
-    <div class="col-md-6">
-    <div class="column content" id="map" style="float:right;width:100%;height:480px;">
+
+
+
+
+ <!-- Graph Working Hour /Day --> 
+    
+        <div class="col-md-3">
+
+            
+            <canvas id="myChart1" width="450" height="300" style="height: 200px; max-width: 400px; margin: 0px auto;"></canvas>
+
+            <script>
+
+            var ctx = document.getElementById("myChart1");
+            var myChart1 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["","Wintor Unit 1", "Wintor Unit 2", "Wintor Unit 3", "Wintor Unit 4", "Wintor Unit 5",""],
+                    datasets: [{
+                        label: 'Productivity /Day',
+                        data: [0, 225, 500, 1000, 400, 300, 0],
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0)',
+                            'rgba(233, 99, 132, 2)',
+                            'rgba(54, 162, 235, 2)',
+                            'rgba(255, 206, 86, 2)',
+                            'rgba(75, 192, 192, 2)',
+                            'rgba(153, 102, 255, 2)',
+                            'rgba(255, 255, 255, 0)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 255, 255, 0)',
+                            'rgba(233,99,132,10)',
+                            'rgba(54, 162, 235, 10)',
+                            'rgba(255, 206, 86, 10)',
+                            'rgba(75, 192, 192, 10)',
+                            'rgba(153, 102, 255, 10)',
+                            'rgba(255, 255, 255, 0)'
+
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+
+                    scales: {
+                        xAxes: [{
+                            stacked: true
+                        }],
+                        yAxes: [{
+                            stacked: true,
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Items'
+                            
+                        }}]
+                    }
+                }
+            });
+			
+
+
+            </script>
+
+            </div>
+                    
+
+<!-- Graph Productivity /Day --> 
+    
+             <div class="col-md-3">
+
+            <canvas id="myChart2" width="450" height="300" style="height: 200px; max-width: 400px; margin: 0px auto;"></canvas>
+
+            <script>
+
+            var ctx = document.getElementById("myChart2");
+            var myChart2 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["","Wintor Unit 1", "Wintor Unit 2", "Wintor Unit 3", "Wintor Unit 4", "Wintor Unit 5",""],
+                    datasets: [{
+                        label: 'Working Hours /Day',
+                        data: [0, 15, 10, 12, 5, 3, 0],
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0)',
+                            'rgba(233, 99, 132, 2)',
+                            'rgba(54, 162, 235, 2)',
+                            'rgba(255, 206, 86, 2)',
+                            'rgba(75, 192, 192, 2)',
+                            'rgba(153, 102, 255, 2)',
+                            'rgba(255, 255, 255, 0)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 255, 255, 0)',
+                            'rgba(233,99,132,10)',
+                            'rgba(54, 162, 235, 10)',
+                            'rgba(255, 206, 86, 10)',
+                            'rgba(75, 192, 192, 10)',
+                            'rgba(153, 102, 255, 10)',
+                            'rgba(255, 255, 255, 0)'
+
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+
+                    scales: {
+                        xAxes: [{
+                            stacked: true
+                        }],
+                        yAxes: [{
+                            stacked: true,
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Hours'
+                            
+                        }}]
+                    }
+                }
+            });
+			
+			
+            </script>
+
+
+            </div>
+
+<!-- Map --> 
+<div class="col-md-6">
+    <div class="column content" id="map" style="width:100%;height:290px;">
     </div>
 	
-	<script src="assets/js/GoogleMapScript.js"></script>
+	<script src="assets/js/mainScript.js"></script>
 
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRA4r9AY-vwt23asnISIY7Nk5ePa323yc&callback=initMap">
     </script>
 </div>
-    <div class="col-sm-12 col-xs-12">
-<p><nav class="navbar navbar-default">
-        <div class="navbar-collapse" id="navcol-5">
-            <div class="container">
-        <div class="navbar-header"><a class="navbar-brand navbar-link" href="#" style="padding-left: 0px!important">
-        <img class="img-responsive" style="float:left; height:30px;" src="assets/img/download.png"></a>
-        </div>
-    
-            <ul class="nav navbar-right">
-                <li role="presentation" class="active"><a href="#"><h5>AOP Winteq © 2017</h5></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
+
+
+
+	</div>
 </div>
+
+
+
+    
+
+
+
+
+
+    <footer class="footer">
+      <div class="container-fluid">
+		<div class="row">
+
+			<div class="col-xs-4">
+			
+			<p>Date: <span id="demonew"></span> Time: <span id="demo"></span> </p>
+			<span id="demo"></span>
+				<script>
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+				if(dd<10) {
+				dd='0'+dd
+				} 
+		
+				if(mm<10) {
+				mm='0'+mm
+				} 
+
+				today = mm+'/'+dd+'/'+yyyy;
+				document.getElementById("demonew").innerHTML = today;
+				var myVar=setInterval(function(){myTimer()},1000);
+				
+				function myTimer() {
+					var d = new Date();
+					document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+				}
+				</script>
+			</div>
+			
+			
+			<div class="col-xs-4">AOP Winteq © 2017</div>
+			
+			<div class="col-xs-4" >
+				<img class="img-responsive" style="height:60px; float:right" src="assets/img/download.png" alt="WINTEQ">
+			</div>
+		</div>
+      </div>
+    </footer>
+	
+	
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
